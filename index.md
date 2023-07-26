@@ -57,22 +57,15 @@ It looks like you are setting up a website for a Data Carpentry curriculum but y
 
 <h2 id="general">General Information</h2>
 
-{% comment %}
+
 Introduction
 This five-day workshop aims to establish and connect scientists and institutes that are role players in the African BioGenome Project (AfricaBP) initiative, create awareness and galvanise institutions and researchers at the regional level to drive the vision and objectives of AfricaBP. Days 1-2 are seminar-style hybrid workshops focusing on current understanding on biodiversity genomics across Northern Africa. Days 3-5 are practical-based, hands-on in-person workshops focusing on sample collections, stakeholders and policy-related engagements, genome sequencing using several technology platforms but not limited to PacBio Hi-Fi, Illumina, Thermo Fisher Scientific, and MGI-Tech.
-{% endcomment %}
 
-{% comment %}
+
+
 AUDIENCE
 Anyone interested in genomics, bioinformatics, molecular biology and related fields.
-{% endcomment %}
-{% if site.carpentry == "swc" %}
-{% include swc/who.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/who.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/who.html %}
-{% endif %}
+
 
 {% comment %}
 LOCATION
