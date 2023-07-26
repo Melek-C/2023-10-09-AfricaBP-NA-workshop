@@ -6,7 +6,7 @@ layout: workshop      # DON'T CHANGE THIS.
 venue: "Institut Pasteur de Tunis"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
 address: "13, place Pasteur, B.P. 74 1002 Tunis, Belvédère, Tunisia"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
 country: "Tunisia"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
 latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "Oct 11-13, 2023"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
@@ -58,17 +58,9 @@ It looks like you are setting up a website for a Data Carpentry curriculum but y
 <h2 id="general">General Information</h2>
 
 {% comment %}
-INTRODUCTION
+Introduction
 This five-day workshop aims to establish and connect scientists and institutes that are role players in the African BioGenome Project (AfricaBP) initiative, create awareness and galvanise institutions and researchers at the regional level to drive the vision and objectives of AfricaBP. Days 1-2 are seminar-style hybrid workshops focusing on current understanding on biodiversity genomics across Northern Africa. Days 3-5 are practical-based, hands-on in-person workshops focusing on sample collections, stakeholders and policy-related engagements, genome sequencing using several technology platforms but not limited to PacBio Hi-Fi, Illumina, Thermo Fisher Scientific, and MGI-Tech.
 {% endcomment %}
-
-{% elsif site.carpentry == "dc" %}
-
-{% endif %}
-
-{% if site.pilot %}
-This is a pilot workshop, testing out a lesson that is still under development. The lesson authors would appreciate any feedback you can give them about the lesson content and suggestions for how it could be further improved.
-{% endif %}
 
 {% comment %}
 AUDIENCE
