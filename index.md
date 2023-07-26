@@ -210,17 +210,13 @@ you can use the section below.
 Move the 'endcomment' tag above the beginning of the following
 <p> tag to make this section visible.
 
-Edit the text to match who can attend the workshop. For instance:
-- This workshop is open to affiliates to ABC university.
-- This workshop is open to the public.
-- If you are interested in attending this workshop, contact me@example.com
-  for more information
-
+Anyone interested in genomics, bioinformatics, molecular biology and related fields
+{% endcomment %}
 <p id="who-can-attend">
     <strong>Who can attend?:</strong>
     This workshop is open to ....
 </p>
-{% endcomment %}
+
 
 <hr/>
 
