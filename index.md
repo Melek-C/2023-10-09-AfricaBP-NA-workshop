@@ -32,6 +32,35 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 {% endcomment %}
 
 
+{% comment %}
+8< ============= For a workshop delete from here =============
+For a workshop please delete the following block until the next dashed-line
+{% endcomment %}
+
+
+<div class="alert alert-danger">
+This is the workshop template. Delete these lines and use it to
+<a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
+your own website. If you are running a self-organized workshop or have not put
+in a workshop request yet, please also fill in
+<a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a>
+to let us know about your workshop and our administrator may contact you if we
+need any extra information.
+If this is a pilot workshop for a new lesson,
+set the `pilot` field to `true` in `_config.yml`.
+For workshops teaching a lesson in The Carpentries Incubator,
+remember to uncomment the `incubator_lesson_site`, `incubator_pre_survey`, and `incubator_post_survey`
+fields in `_config.yml`
+</div>
+
+{% comment %}
+8< ============================= until here ==================
+{% endcomment %}
+
+
+{% comment %}
+Check DC curriculum
+{% endcomment %}
 
 {% if site.carpentry == "dc" %}
 {% unless site.curriculum == "dc-astronomy" or site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-geospatial" or site.curriculum == "dc-image" or site.curriculum == "dc-socsci" %}
@@ -39,9 +68,28 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-image</code>, <code>dc-astronomy</code>, <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
 </div>
 {% endunless %}
+{% endif %}
 
+{% comment %}
+Check SWC curriculum
+{% endcomment %}
 
+{% if site.carpentry == "swc" %}
+{% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
+<div class="alert alert-warning">
+It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
+</div>
+{% endunless %}
+{% endif %}
 
+{% comment %}
+EVENTBRITE
+
+This block includes the Eventbrite registration widget if
+'eventbrite' has been set in the header.  You can delete it if you
+are not using Eventbrite, or leave it in, since it will not be
+displayed if the 'eventbrite' field in the header is not set.
+{% endcomment %}
 {% if page.eventbrite %}
 <strong>Some adblockers block the registration window. If you do not see the
   registration box below, please check your adblocker settings.</strong>
@@ -57,19 +105,45 @@ It looks like you are setting up a website for a Data Carpentry curriculum but y
 
 <h2 id="general">General Information</h2>
 
+{% comment %}
+INTRODUCTION
 
-Introduction
-This five-day workshop aims to establish and connect scientists and institutes that are role players in the African BioGenome Project (AfricaBP) initiative, create awareness and galvanise institutions and researchers at the regional level to drive the vision and objectives of AfricaBP. Days 1-2 are seminar-style hybrid workshops focusing on current understanding on biodiversity genomics across Northern Africa. Days 3-5 are practical-based, hands-on in-person workshops focusing on sample collections, stakeholders and policy-related engagements, genome sequencing using several technology platforms but not limited to PacBio Hi-Fi, Illumina, Thermo Fisher Scientific, and MGI-Tech.
+Edit the general explanatory paragraph below if you want to change
+the pitch.
+{% endcomment %}
+{% if site.carpentry == "swc" %}
+{% include swc/intro.html %}
+{% elsif site.carpentry == "dc" %}
+{% include dc/intro.html %}
+{% elsif site.carpentry == "lc" %}
+{% include lc/intro.html %}
+{% endif %}
 
+{% if site.pilot %}
+This is a pilot workshop, testing out a lesson that is still under development. The lesson authors would appreciate any feedback you can give them about the lesson content and suggestions for how it could be further improved.
+{% endif %}
 
-
+{% comment %}
 AUDIENCE
-Anyone interested in genomics, bioinformatics, molecular biology and related fields.
 
+Explain who your audience is.  (In particular, tell readers if the
+workshop is only open to people from a particular institution.
+{% endcomment %}
+{% if site.carpentry == "swc" %}
+{% include swc/who.html %}
+{% elsif site.carpentry == "dc" %}
+{% include dc/who.html %}
+{% elsif site.carpentry == "lc" %}
+{% include lc/who.html %}
+{% endif %}
 
 {% comment %}
 LOCATION
-Institut PAsteur de Tunis
+
+This block displays the address and links to maps showing directions
+if the latitude and longitude of the workshop have been set.  You
+can use https://www.latlong.net/ to find the lat/long of an
+address.
 {% endcomment %}
 {% assign begin_address = page.address | slice: 0, 4 | downcase  %}
 {% if page.address == "online" %}
@@ -203,13 +277,17 @@ you can use the section below.
 Move the 'endcomment' tag above the beginning of the following
 <p> tag to make this section visible.
 
-Anyone interested in genomics, bioinformatics, molecular biology and related fields
-{% endcomment %}
+Edit the text to match who can attend the workshop. For instance:
+- This workshop is open to affiliates to ABC university.
+- This workshop is open to the public.
+- If you are interested in attending this workshop, contact me@example.com
+  for more information
+
 <p id="who-can-attend">
     <strong>Who can attend?:</strong>
     This workshop is open to ....
 </p>
-
+{% endcomment %}
 
 <hr/>
 
