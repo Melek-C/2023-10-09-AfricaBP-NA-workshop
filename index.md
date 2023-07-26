@@ -22,12 +22,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
 
-HEADER
-
-Edit the values in the block above to be appropriate for your workshop.
-If the value is not 'true', 'false', 'null', or a number, please use
-double quotation marks around the value, unless specified otherwise.
-And run 'make workshop-check' *before* committing to make sure that changes are good.
 
 {% comment %}
 HEADER
@@ -40,28 +34,6 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 
 
 {% comment %}
-8< ============= For a workshop delete from here =============
-For a workshop please delete the following block until the next dashed-line
-{% endcomment %}
-
-
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to
-<a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
-your own website. If you are running a self-organized workshop or have not put
-in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a>
-to let us know about your workshop and our administrator may contact you if we
-need any extra information.
-If this is a pilot workshop for a new lesson,
-set the `pilot` field to `true` in `_config.yml`.
-For workshops teaching a lesson in The Carpentries Incubator,
-remember to uncomment the `incubator_lesson_site`, `incubator_pre_survey`, and `incubator_post_survey`
-fields in `_config.yml`
-</div>
-
-{% comment %}
-8< ============================= until here ==================
 {% endcomment %}
 
 
@@ -81,36 +53,8 @@ It looks like you are setting up a website for a Data Carpentry curriculum but y
 Check SWC curriculum
 {% endcomment %}
 
-{% if site.carpentry == "swc" %}
-{% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
-{% endif %}
 
 
-<h2 id="general">General Information</h2>
 
 {% comment %}
 INTRODUCTION
@@ -118,17 +62,7 @@ INTRODUCTION
 Edit the general explanatory paragraph below if you want to change
 the pitch.
 {% endcomment %}
-{% if site.carpentry == "swc" %}
-{% include swc/intro.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/intro.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/intro.html %}
-{% endif %}
-
-{% if site.pilot %}
-This is a pilot workshop, testing out a lesson that is still under development. The lesson authors would appreciate any feedback you can give them about the lesson content and suggestions for how it could be further improved.
-{% endif %}
+This five-day workshop aims to establish and connect scientists and institutes that are role players in the African BioGenome Project (AfricaBP) initiative, create awareness and galvanise institutions and researchers at the regional level to drive the vision and objectives of AfricaBP. Days 1-2 are seminar-style hybrid workshops focusing on current understanding on biodiversity genomics across Northern Africa. Days 3-5 are practical-based, hands-on in-person workshops focusing on sample collections, stakeholders and policy-related engagements, genome sequencing using several technology platforms but not limited to PacBio Hi-Fi, Illumina, Thermo Fisher Scientific, and MGI-Tech.
 
 {% comment %}
 AUDIENCE
