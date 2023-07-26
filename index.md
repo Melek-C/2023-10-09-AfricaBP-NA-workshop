@@ -62,7 +62,9 @@ INTRODUCTION
 Edit the general explanatory paragraph below if you want to change
 the pitch.
 {% endcomment %}
-This five-day workshop aims to establish and connect scientists and institutes that are role players in the African BioGenome Project (AfricaBP) initiative, create awareness and galvanise institutions and researchers at the regional level to drive the vision and objectives of AfricaBP. Days 1-2 are seminar-style hybrid workshops focusing on current understanding on biodiversity genomics across Northern Africa. Days 3-5 are practical-based, hands-on in-person workshops focusing on sample collections, stakeholders and policy-related engagements, genome sequencing using several technology platforms but not limited to PacBio Hi-Fi, Illumina, Thermo Fisher Scientific, and MGI-Tech.
+WHAT IS ABOUT?
+
+This workshop aims to establish and connect scientists and institutes that are role players in the African BioGenome Project (AfricaBP) initiative, create awareness and galvanise institutions and researchers at the regional level to drive the vision and objectives of AfricaBP. Days 1-2 are seminar-style hybrid workshops focusing on current understanding on biodiversity genomics across Northern Africa. Days 3-5 are practical-based, hands-on in-person parallel workshops focusing on sample collections, stakeholders and policy-related engagements, genome sequencing using several technology platforms. In Tunisia, the practical session will cover data management and analysis for genomics research including: best practices for organization of bioinformatics projects and data, use of command-line utilities, use of command-line tools to analyze sequence quality and perform variant calling, and connecting to and using cloud computing.
 
 {% comment %}
 AUDIENCE
@@ -70,7 +72,7 @@ AUDIENCE
 Explain who your audience is.  (In particular, tell readers if the
 workshop is only open to people from a particular institution.
 {% endcomment %}
-Anyone interested in genomics, bioinformatics, molecular biology and related fields.
+This lesson assumes that learners have no prior experience with the tools covered in the workshop. However, learners are expected to have some familiarity with biological concepts, including the concept of genomic variation within a population. An equipped informatics classroom is available for the participants.
 
 {% comment %}
 LOCATION
