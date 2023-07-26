@@ -54,7 +54,7 @@ Check SWC curriculum
 {% endcomment %}
 
 
-
+<h2 id="general">General Information</h2>
 
 {% comment %}
 INTRODUCTION
